@@ -10,7 +10,7 @@ const int DELAY = 150;
 int ROWS = 0;
 int COLS = 0;
 
-#include "exgraphics.h"
+#include "conwaygol.h"
 
 struct tile{
 	SDL_Rect rectangle;
