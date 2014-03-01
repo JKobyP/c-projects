@@ -1,4 +1,5 @@
 Conway's Game of Life implemented by Koby Picker
 With help from tutorials at lazyfoo.net
 
-Click to interact, press any key to start, pause, or resume.
+Click to interact, press the space bar to start, pause, or resume.
+Up and down arrow keys control the speed of the simulation.

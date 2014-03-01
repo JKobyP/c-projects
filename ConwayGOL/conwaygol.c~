@@ -252,8 +252,6 @@ void handleKeyEvent(SDL_Event e, int* delay, int* pause)
 		//speed up or slow down
 		case SDLK_UP:
 			*delay -= 10;
-			if(*delay <= 50)
-				*delay = 50;
 			break;
 		case SDLK_DOWN:
 			*delay += 10;
