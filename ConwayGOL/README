@@ -1,3 +1,5 @@
+REQUIRES SDL2
+
 Conway's Game of Life implemented by Koby Picker
 With help from tutorials at lazyfoo.net
 
