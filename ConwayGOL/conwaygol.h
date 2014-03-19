@@ -1,7 +1,6 @@
-#ifndef EXGRAPHICS_H
-#define EXGRAPHICS_H
+#ifndef CONWAYGOL_H
+#define CONWAYGOL_H
 
-struct tile;
 void map_update(struct tile** map, SDL_Surface* screenSurface);
 struct tile *tile_getNeighbors(struct tile** map, int i, int j);
 int tile_liveNeighbors(struct tile *neighbors);

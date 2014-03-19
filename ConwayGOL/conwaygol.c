@@ -11,14 +11,8 @@ int COLS = 0;
 SDL_Window* window = NULL;
 SDL_Surface* screenSurface = NULL;
 
+#include "../sdlgrid.h"
 #include "conwaygol.h"
-
-struct tile{
-	SDL_Rect rectangle;
-	int live;
-	int dying;
-	int born;
-};
 
 int initialize_sdl()
 {
@@ -42,34 +36,16 @@ int initialize_sdl()
 	}
 }
 
+
 int main( int argc, char* args[] )
 {
 	ROWS = SCREEN_HEIGHT/TILE_SIZE;
 	COLS = SCREEN_WIDTH/TILE_SIZE;
 	//Allocate memory for our game board
-	struct tile** map = malloc(sizeof(struct tile)*ROWS);
+	struct tile** map = map_init(ROWS, COLS, TILE_SIZE);
 
 	//initialize sdl
 	assert(initialize_sdl());
-
-	int i;
-	int j;
-	
-	//initialize the game board (map)
-	for (i = 0; i < ROWS; i++)
-	{
-		map[i] = malloc(sizeof(struct tile)*COLS);
-		for(j = 0; j < COLS; j++)
-		{
-			map[i][j].rectangle.x = i*TILE_SIZE;
-			map[i][j].rectangle.y = j*TILE_SIZE;
-			map[i][j].rectangle.w = TILE_SIZE;
-			map[i][j].rectangle.h = TILE_SIZE;
-			map[i][j].live = 0;
-			map[i][j].dying = 0;
-			map[i][j].born = 0;
-		}
-	}
 
 	//Get widow surface
 	screenSurface = SDL_GetWindowSurface(window);
@@ -102,11 +78,7 @@ int main( int argc, char* args[] )
 			}
 		}
 	}
-	//deallocate memory for game board
-	for(i = 0; i < ROWS; i++)
-		free(map[i]);
-	free(map);
-
+	map_destroy(map, ROWS);
 	close_sdl();
 	return 0;
 }
