@@ -239,7 +239,7 @@ void handleMouseEvent(SDL_Event e, struct tile** map, SDL_Surface* screenSurface
 	int y = e.button.y;
 	assert(0 <= y && y <= SCREEN_HEIGHT && 0 <= x && x <= SCREEN_WIDTH);
 
-	struct tile* toChange = &map[x/TILE_SIZE][y/TILE_SIZE];
+	struct tile* toChange = &map[y/TILE_SIZE][x/TILE_SIZE];
 	if(toChange->live == 1)
 	{
 		toChange->live = 0;
