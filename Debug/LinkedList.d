@@ -1,1 +1,0 @@
-LinkedList.d: ../LinkedList.c
