@@ -240,7 +240,7 @@ void map_update(struct tile** map, SDL_Surface *screenSurface, struct snake *mys
 			break;
 	}
 	//losing condition - hits walls	
-	if(headLoc[0] >= ROWS || headLoc[0] < 0 || headLoc[1] > COLS || headLoc[1] < 0)
+	if(headLoc[0] >= ROWS || headLoc[0] < 0 || headLoc[1] >= COLS || headLoc[1] < 0)
 	{
 		*quit = 0;
 		return;
