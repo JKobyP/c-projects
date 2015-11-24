@@ -20,6 +20,6 @@ If you move around the directory tree, then it's on you to change the makefile.
     ./bin/snake.o
 
 ##To "play" Conway's Game of Life
-    cd ConwayGol
+    cd ConwayGOL
     make
     ./bin/conwaygol.o
