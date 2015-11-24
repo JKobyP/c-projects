@@ -1,4 +1,4 @@
-REQUIRES SDL2, and sdlgrid files from https://github.com/JKobyP/misc-projects
+REQUIRES SDL2, and sdlgrid files from https://github.com/JKobyP/c-projects
 
 Conway's Game of Life implemented by Koby Picker
 With help from tutorials at lazyfoo.net
