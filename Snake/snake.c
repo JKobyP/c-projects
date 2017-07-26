@@ -82,6 +82,7 @@ void removeLast(struct snake *mysnake, struct tile** map)
 	mysnake->list->secondLast = tmp;
 	mysnake->list->size--;
 }
+
 void insert(struct LinkedList *list, int value[2], int i)
 {
 	struct Node *node = Node_create(value);
