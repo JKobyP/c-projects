@@ -1,4 +1,5 @@
 #include <SDL.h>
+
 struct tile{
 	SDL_Rect rectangle;
 	int live;
