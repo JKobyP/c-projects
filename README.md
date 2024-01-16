@@ -9,20 +9,24 @@ Both were implemented as a way to learn c.
 
 
 ----
-#Dependencies:
+# Dependencies
+
 Both games require SDL2 to run. Install it from your favorite package
 manager.
 
-#Usage
-Both of these games expect sdlgrid.{c,h} to be in the parent directory.
+# Usage
+
+Both of these games expect sdlgrid.c and sdlgrid.h to be in the parent directory.
 If you move around the directory tree, then it's on you to change the makefile.
 
-##To play Snake
+## To play Snake
+
     cd Snake
     make
     ./bin/snake.o
 
-##To "play" Conway's Game of Life
+## To "play" Conway's Game of Life
+
     cd ConwayGOL
     make
     ./bin/conwaygol.o
